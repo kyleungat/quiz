@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+*{
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    background: linear-gradient(45deg, #fd8a8a, #f5ba83);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* need to be removed */
+    overflow: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card{
+    width: 50vw;
+    height: 70vh;
+    background: #ffffff;
+    border-radius: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 1em;
+    border-radius: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.splash{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #cefca8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.splash i{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(30deg, #6edf51, #e1e43d);
+    color: #16ac02;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px #888888;
+}
+
+.splash h1{
+    letter-spacing: 0.2em;
+}
+
+.slide-bg{
+    background: linear-gradient(20deg, #aaaaaa, #ededed);
+    width: 80%;
+    height: 80px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.slide-bg button{
+    height: 100%;
+    width: 40%;
+    background-color: #fa4747;
+    font-size: 2em;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    position: absolute;
+}
+
+/* for positioning of question-svg */
+.card {
+    position: relative;
+    overflow: hidden;
+}
+/* for positioning of question-svg */
+
+.question{
+    background: linear-gradient(90deg, #effc7c,#a8f788);
+}
+
+.question .animated-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.question .border-svg, .question .border-svg-rect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+}
+
+.border-svg-rect{
+    stroke: #ee3434;
+    stroke-width: 10;
+}
+
+.border-svg rect{
+    width: 100%;
+    height: 100%;
+}
+
+.question h2{
+    margin: 1em;
+    font-size: 2em;
+}
+
+.quation input[type="radio"]:checked{
+    background: #16ac02;
+}
+
+/* .question span{
+    display: inline-block;
+    margin-right: 0;
+}
+
+.question span::first-letter{
+    text-transform: uppercase;
+} */
+
+.question div{
+    margin: 1em;
+    padding: 1em;
+}
+
+.question button{
+    text-transform: uppercase;
+    padding: 0.8em 1em;
+    background: #f7a428;
+    color: #ffffff;
+    font-weight: 700;
+    width: 100px;
+    margin: 1em auto;
+    display: block;
+    font-size: 1.2em;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.question button:hover{
+    background: #f5c071;
+}
+
+.result {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: 3em;
+    background-color: #cefca8;
+}
+
+/* .result svg{
+    transform: rotate(-90deg);
+} */
+
+.result text{
+    font-size: 100px;
+}
+
+.result button{
+    display: inline-block;
+    padding: 0.2em 1em;
+    width: 30%;
+    background: transparent;
+    text-transform: uppercase;
+}
+
+#try-again{
+    border: 2px solid #30b410;
+    color: #30b410;
+}
+
+#try-again:hover{
+    color: #4f9234;
+}
+
+
+#back {
+    border: 2px solid #686868;
+    color: #686868;
+}
+
+#back:hover{
+    color: #999999;
+}
+
+
+@media screen and (max-width: 700px){
+    .card{
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .card{
+        width: 90vw;
+    }
 }
