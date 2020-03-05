@@ -38,11 +38,11 @@ function Question({ callback, correctCb, timeCb, size }) {
         return () => clearInterval(QuetionTimer);
     }, []);
 
-    // useEffect(() => {
-    //     if (timerSecond === 0) {
-    //         procedure();
-    //     }
-    // }, [timerSecond])
+    useEffect(() => {
+        if (timerSecond === 0) {
+            procedure();
+        }
+    }, [timerSecond])
 
     useEffect(() => {
         set({x: calArea(size[0], size[1]) });

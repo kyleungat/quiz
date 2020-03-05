@@ -214,4 +214,11 @@
     .card{
         width: 90vw;
     }
+
+    .slide-bg button{
+        font-size: 1em;
+    }
+    .question h2{
+        font-size: 1.2em;
+    }
 }
